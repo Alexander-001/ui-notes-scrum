@@ -1,0 +1,39 @@
+<shared-loader *ngIf="isLoading"></shared-loader>
+
+<shared-navbar class="w-full">
+  <div class="w-full">
+    <div class="bg-gray-50 dark:bg-gray-900 h-screen">
+      <div class="mx-auto lg:py-0 w-full h-[100%]">
+        <!-- First div  -->
+        <div class="flex items-start justify-around pt-[60px] h-[100%]">
+          <div
+            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%] max-h-[95%] overflow-scroll"
+          >
+            <h1 class="p-5 text-white" style="margin-bottom: 0">Tareas</h1>
+            <notes-note-card noteMessage="Mantenedor de usuarios" />
+            <div
+              class="hover:bg-gray-700 hover:cursor-pointer m-2 h-[45px] rounded-md"
+            >
+              <p
+                style="margin: 0"
+                class="pl-5 text-gray-400 flex items-center h-[100%] text-xl"
+              >
+                + Añadir tarea
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%]"
+          >
+            <h1 class="p-5 text-white">En proceso</h1>
+          </div>
+          <div
+            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%]"
+          >
+            <h1 class="p-5 text-white">Listo</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</shared-navbar>
