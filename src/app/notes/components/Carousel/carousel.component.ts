@@ -63,7 +63,7 @@ export class CarouselComponent {
 
   handleSwipe(endX: number): void {
     const deltaX = endX - this.startX;
-    const SWIPE_THRESHOLD = 150;
+    const SWIPE_THRESHOLD = 80;
     if (deltaX > SWIPE_THRESHOLD) {
       this.prevSlide();
       this.isDragging = false;
