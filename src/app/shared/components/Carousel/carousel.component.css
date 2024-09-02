@@ -1,0 +1,11 @@
+.carousel-slide {
+  transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide.inactive {
+  display: none;
+}

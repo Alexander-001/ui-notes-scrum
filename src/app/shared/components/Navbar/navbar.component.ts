@@ -10,8 +10,8 @@ export class NavbarComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   public sidebarItems = [
-    { label: 'Inicio', icon: 'view_module', url: '/notes/home' },
-    { label: 'Historial de notas', icon: 'label', url: '/notes/history' },
+    { label: 'Tableros', icon: 'view_module', url: '/notes/home' },
+    { label: 'Sus tableros', icon: 'label', url: '/notes/history' },
   ];
 
   onClickCloseSession() {

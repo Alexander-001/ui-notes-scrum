@@ -1,0 +1,25 @@
+<div class="relative w-full h-[94vh]" data-carousel="static">
+  <div class="relative h-full overflow-hidden rounded-lg md:h-96">
+    <div class="duration-700 ease-in-out" *ngIf="isCurrentSlide(0)">
+      <ng-content select="[data-slide='0']"></ng-content>
+    </div>
+    <div class="duration-700 ease-in-out" *ngIf="isCurrentSlide(1)">
+      <ng-content select="[data-slide='1']"></ng-content>
+    </div>
+    <div class="duration-700 ease-in-out" *ngIf="isCurrentSlide(2)">
+      <ng-content select="[data-slide='2']"></ng-content>
+    </div>
+  </div>
+  <div
+    class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+  >
+    <button
+      *ngFor="let index of [0, 1, 2]; let i = index"
+      type="button"
+      class="w-3 h-3 rounded-full bg-white"
+      [attr.aria-current]="isCurrentSlide(i) ? 'true' : 'false'"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+      (click)="currentSlide = i"
+    ></button>
+  </div>
+</div>

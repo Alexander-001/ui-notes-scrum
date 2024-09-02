@@ -1,39 +1,71 @@
 <shared-loader *ngIf="isLoading"></shared-loader>
-
 <shared-navbar class="w-full">
-  <div class="w-full">
-    <div class="bg-gray-50 dark:bg-gray-900 h-screen">
-      <div class="mx-auto lg:py-0 w-full h-[100%]">
-        <!-- First div  -->
-        <div class="flex items-start justify-around pt-[60px] h-[100%]">
-          <div
-            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%] max-h-[95%] overflow-scroll"
-          >
-            <h1 class="p-5 text-white" style="margin-bottom: 0">Tareas</h1>
-            <notes-note-card noteMessage="Mantenedor de usuarios" />
+  <!-- show in tablet and desktop -->
+  <div class="hidden md:block">
+    <!-- show here -->
+  </div>
+  <!-- show carousel only in mobile -->
+  <shared-carousel class="bg-gray-900 block md:hidden" [numberCarousel]="0">
+    <!-- Show all this -->
+    <div class="w-full h-full" data-slide="0">
+      <div class="bg-gray-50 dark:bg-gray-900">
+        <div class="mx-auto h-screen lg:py-0 w-full">
+          <!-- First div  -->
+          <div class="flex items-start justify-around pt-[60px] h-[100%]">
             <div
-              class="hover:bg-gray-700 hover:cursor-pointer m-2 h-[45px] rounded-md"
+              class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[90%] max-h-[80%] overflow-scroll"
             >
-              <p
-                style="margin: 0"
-                class="pl-5 text-gray-400 flex items-center h-[100%] text-xl"
+              <h1 class="p-5 text-white" style="margin-bottom: 0">To Do</h1>
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+              <div
+                class="hover:bg-gray-700 hover:cursor-pointer m-2 h-[45px] rounded-md"
               >
-                + Añadir tarea
-              </p>
+                <p
+                  style="margin: 0"
+                  class="pl-5 text-gray-400 flex items-center h-[100%] text-xl"
+                >
+                  + Añadir tarea
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%]"
-          >
-            <h1 class="p-5 text-white">En proceso</h1>
-          </div>
-          <div
-            class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[30%]"
-          >
-            <h1 class="p-5 text-white">Listo</h1>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="w-full h-full" data-slide="1">
+      <div class="bg-gray-50 dark:bg-gray-900">
+        <div class="mx-auto h-screen lg:py-0 w-full">
+          <!-- First div  -->
+          <div class="flex items-start justify-around pt-[60px] h-[100%]">
+            <div
+              class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[90%] max-h-[80%] overflow-scroll pb-5"
+            >
+              <h1 class="p-5 text-white" style="margin-bottom: 0">
+                In Progress
+              </h1>
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full h-full" data-slide="2">
+      <div class="bg-gray-50 dark:bg-gray-900">
+        <div class="mx-auto h-screen lg:py-0 w-full">
+          <!-- First div  -->
+          <div class="flex items-start justify-around pt-[60px] h-[100%]">
+            <div
+              class="rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 w-[90%] max-h-[80%] overflow-scroll pb-5"
+            >
+              <h1 class="p-5 text-white" style="margin-bottom: 0">Done</h1>
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+              <notes-note-card noteMessage="Mantenedor de usuarios" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </shared-carousel>
 </shared-navbar>
